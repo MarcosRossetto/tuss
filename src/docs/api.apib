@@ -1,0 +1,62 @@
+FORMAT: 1A
+HOST: https://tuss2020.herokuapp.com
+
+# API TUSS
+
+TUSS: Terminologia Unificada da Saúde Suplementar, é um padrão para registro e intercâmbio de dados entre operadoras de planos privados de assistência à saúde e prestadores de serviços médico-hospitalares da Agência Nacional de Saúde Suplementar – ANS.
+
+# Group TUSS
+
+## TUSS [/tuss/paginate{?page,limit}]
++ Parameters
+  + page: 1 (number, required) - Número da página
+  + limit: 10 (number, optional) - Limite de resultados (default: 10)
+
+### Listar resultados por página [GET]
+
++ Response 200 (application/json)
+  + Attributes (Paginate)
+
++ Response 404 (application/json)
+  + Attributes (Error404)
+
++ Response 500 (application/json)
+  + Attributes (Error500)
+
+## TUSS [/tuss/{code}]
+
++ Parameters
+  + code: 30501407 (string, required) - Código TUSS
+
+### Filtrar pelo código [GET]
+
++ Response 200 (application/json)
+  + Attributes (TUSS)
+
++ Response 404 (application/json)
+  + Attributes (Error404)
+
++ Response 500 (application/json)
+  + Attributes (Error500)
+
+
+# Data Structures
+
+## TUSS (object)
++ id: `3fedbbf1` (string) - ID
++ code: 30501407 (string) - Código do TUSS
++ term: Tratamento cirúrgico do rinofima (string) - Nome do TUSS
+
+## Paginate (object)
++ page: `1` (number) - Número da página
++ limit: `10` (number) - Limite de resultados por página
++ totalPages: `6000` (number) - Total de páginas
++ tuss (array[TUSS]) - TUSS
+
+## `Error404` (object)
++ code: `404` (string) - Status code
++ message: Error (string) - Mensagem do status
+
+## `Error500` (object)
++ code: `500` (string) - Status code
++ message: Error (string) - Mensagem do status
