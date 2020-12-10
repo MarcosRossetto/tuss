@@ -190,3 +190,5 @@
 {"message":"::1 - - [10/Dec/2020:16:04:10 +0000] \"GET /tuss/paginate?page=1&limit=0 HTTP/1.1\" 200 1333\n","level":"info","service":"user-service"}
 {"message":"::1 - - [10/Dec/2020:16:04:20 +0000] \"GET /tuss/paginate?page=1&limit=100 HTTP/1.1\" 200 12849\n","level":"info","service":"user-service"}
 {"message":"::1 - - [10/Dec/2020:16:04:29 +0000] \"GET /tuss/paginate?page=1&limit=1000 HTTP/1.1\" 200 114189\n","level":"info","service":"user-service"}
+{"message":"::1 - - [10/Dec/2020:20:08:01 +0000] \"GET / HTTP/1.1\" 302 114\n","level":"info","service":"user-service"}
+{"message":"::1 - - [10/Dec/2020:20:08:10 +0000] \"GET / HTTP/1.1\" 302 114\n","level":"info","service":"user-service"}

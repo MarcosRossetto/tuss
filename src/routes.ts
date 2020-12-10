@@ -3,9 +3,8 @@ import { createTussController } from "./useCases/CreateTuss"
 import { findTussController } from "./useCases/FindTuss"
 
 const router = Router()
-
 router.get('/', (req, res) => {
-  return res.sendFile(`${__dirname}/docs/output.html`)
+  return res.redirect('https://tuss-doc.000webhostapp.com/')
 })
 
 router.post('/tuss', (req, res) => {
